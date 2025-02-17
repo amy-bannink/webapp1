@@ -1,0 +1,89 @@
+/* theme standards */
+*{
+    margin: 0;
+    padding: 0;
+}
+h1{
+ font-size: xx-large;
+}
+
+h2{
+    font-size: large;
+}
+
+.font-m{
+    font-family: "Mochiy Pop One", serif;
+    font-style: normal;
+}
+
+.font-s{
+    font-family: "Sawarabi Mincho", serif;
+    font-style: normal;
+}
+
+.flex-c{
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-r{
+    display: flex;
+    flex-direction: row;
+}
+
+.margin-bottom{
+    margin-bottom: 40px;
+}
+
+.icon-large{
+    width: 3vw;
+}
+/* navigation menu */
+header{
+    height: 80px;
+    width: 100vw;
+    background-color: #212121;
+    display: flex;
+    align-items: center;
+}
+
+nav ul{
+    width: 78vw;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: larger;
+}
+
+nav ul li a{
+    text-decoration: none;
+    border-radius: 20px;
+    color: #F5F5F5;
+    padding: 10px 16px;
+    display: block;
+}
+
+/* home */
+
+
+/* menu  */
+
+
+/* gallery  */
+
+
+/* images */
+.img-logo{
+    width: 5vw;
+    margin-left: 2vw;
+}
+
+.icon-nav{
+    width: 3vw;
+    padding: 2%;
+}
+
+
+/* test */
+
+
