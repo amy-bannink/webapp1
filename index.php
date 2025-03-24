@@ -1,79 +1,31 @@
-<?php
-  if (!empty($_GET['q'])) {
-    switch ($_GET['q']) {
-      case 'info':
-        phpinfo(); 
-        exit;
-      break;
-    }
-  }
-?>
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Laragon</title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
 
-        <link href="https://fonts.googleapis.com/css?family=Karla:400" rel="stylesheet" type="text/css">
-
-        <style>
-            html, body {
-                height: 100%;
-            }
-
-            body {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                display: table;
-                font-weight: 100;
-                font-family: 'Karla';
-            }
-
-            .container {
-                text-align: center;
-                display: table-cell;
-                vertical-align: middle;
-            }
-
-            .content {
-                text-align: center;
-                display: inline-block;
-            }
-
-            .title {
-                font-size: 96px;
-            }
-
-            .opt {
-                margin-top: 30px;
-            }
-
-            .opt a {
-              text-decoration: none;
-              font-size: 150%;
-            }
-            
-            a:hover {
-              color: red;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <div class="content">
-                <div class="title" title="Laragon">Laragon</div>
-     
-                <div class="info"><br />
-                      <?php print($_SERVER['SERVER_SOFTWARE']); ?><br />
-                      PHP version: <?php print phpversion(); ?>   <span><a title="phpinfo()" href="/?q=info">info</a></span><br />
-                      Document Root: <?php print ($_SERVER['DOCUMENT_ROOT']); ?><br />
-
-                </div>
-                <div class="opt">
-                  <div><a title="Getting Started" href="https://laragon.org/docs">Getting Started</a></div>
-                </div>
-            </div>
-
+    <!-- Importing Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Sawarabi+Mincho&display=swap" rel="stylesheet">
+   
+    <title>Sakura Sushi Website</title>
+</head>
+<body>
+<?php
+include('partials/header.php');
+?>
+  <section class="flex-r home-section">
+        <div class="home-div">
+            <img src="./assets/img/logo-soft.png" id="logo-home" alt="Sakura sushi restaurant logo">
         </div>
-    </body>
+        <div class="home-div">
+            <h1 class="font-m">Welkom!</h1>
+            <h2 class="font-s">Bij Sakura Sushi Restaurant</h2>
+            <p class="font-s">Bij Sakura Sushi Restaurant in Nijmegen kunt u genieten van heerlijke, verse sushi. U kunt online kunt bestellen of van te voren reserveren en lekker genieten in ons restaurant. Kom uzelf verwennen met ons eten, gemaakt met pure verse ingrediënten, die onze koks verwerken tot smakelijke Japanse gerechten.</p>
+        </div>
+    </section>
+<?php
+include('partials/footer.php');
+?>
+</body>
 </html>
