@@ -16,7 +16,13 @@ include('partials/header.php');
 ?>
  <section class="menu-section flex-r">
         <h1 class="font-m">Menu</h1>
-    </section>
+</section>
+<main>
+<form method="GET" action="./dbcalls/search.php">
+    <input type="text" name="searchresult">
+    <input type="submit" value="zoeken">
+</form>    
+</main>
 <?php
 include('partials/footer.php');
 ?>
