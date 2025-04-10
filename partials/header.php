@@ -6,13 +6,18 @@
         <!-- Navigation menu -->
         <nav>
             <ul>
-                <li class="font-s"><a href="../index.php">Home</a></li>
-                <li class="font-s"><a href="../menu.php">Menu</a></li>
-                <li class="font-s"><a href="index.html">Galerie</a></li>
-                <li class="font-s"><a href="index.html">Contact</a></li>
-                <li class="font-s"><a href="index.html">Reserveren</a></li>
+                <li class="font-s"><a href="index.php">Home</a></li>
+                <li class="font-s"><a href="menu.php">Menu</a></li>
+                <li class="font-s"><a href="galerie.php">Galerie</a></li>
+                <li class="font-s"><a href="contact.php">Contact</a></li>
+                <li class="font-s"><a href="reserveren.php">Reserveren</a></li>
             </ul>
         </nav>
+        <a href="bestellen.php">
         <img src="./assets/img/shopping-cart-icon.svg" class="icon-nav" alt="shopping cart icon">
+        </a>
+        <a href="login.php">
         <img src="./assets/img/user-icon.svg" class="icon-nav" alt="shopping cart icon">
+
+        </a>
     </header>    

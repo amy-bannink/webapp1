@@ -33,7 +33,7 @@ include('partials/header.php');
 </section>
 <section class="contact-form-area flex-r">
     <div class="contact-form">
-        <div id="contact-form-title">
+        <div class="contact-form-title">
         <h2 class="t-w font-s">Contactformulier </h2>
         </div>
         <form class="flex-c" id="form1">
