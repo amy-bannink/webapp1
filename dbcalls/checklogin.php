@@ -10,7 +10,9 @@
 
 if ($result){
     $_SESSION['username'] = $result['username'];
+    header('Location: ../admin2.php');
 }
 else{
-    echo 'boehoe';
+    header('Location: ../index.php');
 }
+

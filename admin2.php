@@ -1,10 +1,10 @@
 <?php
 
 session_start();
-if(isset($_SESSION['username']))
-
-
-
+if(!isset($_SESSION['username'])){
+    header('location: ./index.php');
+    exit;
+} $username = $_SESSION['username'];
 
 ?>
 
@@ -19,7 +19,7 @@ if(isset($_SESSION['username']))
     <title>Sakura Sushi Website</title>
 </head>
 <body>
-<button?php
+<?php
 include('./partials/header.php');
 ?>
 <section class="flex-r galerie-title">
@@ -44,7 +44,9 @@ include('./partials/header.php');
     </div>
 </section>
 
-<h2>Update/Delete</h2>
+<div class="create-form-title">
+        <h2 class="font-s bold">UPDATE/DELETE</h2>
+</div>
 <section class="admin">
 <?php
 
@@ -56,22 +58,19 @@ include('./partials/header.php');
             foreach ($result as $value) {
 
                 ?>
-                
-                <form action="./dbcalls/update.php" method="post">
-                    <input type="text" name="Productnaam" id="" value="<?php echo $value['Productnaam']; ?>">
-                    <input type="text" name="Prijs" id="" value="<?php echo $value['Prijs']; ?>">
-                    <input type="text" name="Omschrijving" id="" value="<?php echo $value['Omschrijving']; ?>">
-                    <input type="text" name="Img" id="" value="<?php echo $value['Img']; ?>">
-                    <button type="submit">Update</button>
-                </form>
+                <div class="update-form">
+                    <form action="./dbcalls/update.php" method="post">
+                        <input type="text" class="update-input font-s" name="Productnaam" id="" value="<?php echo $value['Productnaam']; ?>">
+                        <input type="text" class="update-input font-s" name="Prijs" id="" value="<?php echo $value['Prijs']; ?>">
+                        <input type="text" class="update-input font-s" name="Omschrijving" id="" value="<?php echo $value['Omschrijving']; ?>">
+                        <input type="text" class="update-input font-s" name="Img" id="" value="<?php echo $value['Img']; ?>">
+                        <button type="submit" class="update-button">Update</button>
+                    </form>
                 <?php
-
-              
 echo '<form action="./dbcalls/delete.php" method="post">';
-echo '<input type="hidden" name="ID" value="' . $value['ID'] . '">';
-echo '<input type="submit" name="" value="delete" > ';
+echo '<input class="update-input" type="hidden" name="ID" value="' . $value['ID'] . '">';
+echo '<input class="update-button" type="submit" name="" value="delete" > ';
 echo '</form>';
-
 echo '</div>';
 }
 ?>

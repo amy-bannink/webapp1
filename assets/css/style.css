@@ -53,7 +53,7 @@ h2{
     width: 3vw;
 }
 
-.submit-button{
+.submit-button, .update-button{
     padding: 11px 30px;
     background-color: #D32F2F;
     border-radius: 20px;
@@ -200,7 +200,7 @@ footer{
     margin-bottom: 150px;
 }
 
-.contact-form-area, .create-form-area{
+.contact-form-area, .create-form-area, .admin{
     justify-content: center;
 }
 
@@ -352,7 +352,7 @@ form{
 
 
 /* admin */
-.create-form{
+.create-form, .update-form{
     width: 25vw;
     height: 400px;
     background-color: #212121;
@@ -361,10 +361,27 @@ form{
     margin-bottom: 150px;
 }
 
+.update-form{
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    padding: 20px 15px;
+    border-radius: 15px;
+    width: 22vw;
+}
+
 .create-input{
     width: 18vw;
 }
 
+.update-input{
+    width: 20vw;
+}
+
+.update-button{
+    padding: 5px 13px;
+    margin-top: 5px;
+}
 
 /* images */
 .img-logo{
