@@ -63,6 +63,7 @@ include('./partials/header.php');
                         <input type="text" class="update-input font-s" name="Productnaam" id="" value="<?php echo $value['Productnaam']; ?>">
                         <input type="text" class="update-input font-s" name="Prijs" id="" value="<?php echo $value['Prijs']; ?>">
                         <input type="text" class="update-input font-s" name="Omschrijving" id="" value="<?php echo $value['Omschrijving']; ?>">
+                        <input type="text" class="update-input font-s" name="Categorie" id="" value="<?php echo $value['Categorie']; ?>">
                         <input type="text" class="update-input font-s" name="Img" id="" value="<?php echo $value['Img']; ?>">
                         <button type="submit" class="update-button">Update</button>
                     </form>
