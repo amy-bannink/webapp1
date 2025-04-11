@@ -29,20 +29,26 @@
         <?php
         include('dbcalls/read.php');
 
-        foreach ($cat as $value) {
-            echo '<h1>' . $value['Categorie'] . '</h1>';
-            foreach ($result as $row) {
-                if ($value['Categorie'] == $row['Categorie']) {
-                    echo '<div class="flex-r menu-items">';
-                    echo '<img src="./assets/img/add-to-cart-icon.svg" class="shopping-cart-icon">';
-                    echo '<div class="menu-item-info flex-c">';
-                    echo '<div class="flex-r">';
-                    echo '<h2 class ="font-s productnaam">' . $row['Productnaam'] .'</h2>' . '<p class="font-s">€' . $row['Prijs'] . '</div>';
-                    echo '<p class="font-s">' . $row['Omschrijving'] . '</p></div>';
-                    echo '</div>';
-                   }
+        session_start();
+        if (isset($_SESSION['searchresults'])) {
+            var_dump($_SESSION['searchresults']);
+        } else {
+            foreach ($cat as $value) {
+                echo '<h1 class="categorie-title">' . $value['Categorie'] . '</h1>';
+                foreach ($result as $row) {
+                    if ($value['Categorie'] == $row['Categorie']) {
+                        echo '<div class="flex-r menu-items">';
+                        echo '<img src="./assets/img/add-to-cart-icon.svg" class="shopping-cart-icon">';
+                        echo '<div class="menu-item-info flex-c">';
+                        echo '<div class="flex-r">';
+                        echo '<h2 class ="font-s productnaam">' . $row['Productnaam'] . '</h2>' . '<p class="font-s">€' . $row['Prijs'] . '</div>';
+                        echo '<p class="font-s">' . $row['Omschrijving'] . '</p></div>';
+                        echo '</div>';
+                    }
+                }
             }
         }
+
 
         ?>
         <!-- <h2 class="font-s">Categorie</h2>
