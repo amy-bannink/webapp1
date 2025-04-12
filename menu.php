@@ -9,6 +9,7 @@
     <!-- Importing Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Sawarabi+Mincho&display=swap"
         rel="stylesheet">
+        <script src="./assets/js/customButton.js"></script>
 
     <title>Sakura Sushi Website</title>
 </head>
@@ -21,11 +22,15 @@
         <h1 class="font-m">Menu</h1>
     </section>
     <main class="menu-main flex-c">
-        <form method="GET" action="./dbcalls/search.php">
+        <form method="" action="">
             <input type="text" name="searchresult">
             <input type="submit" value="zoeken">
         </form>
 
+        <form action="./dbcalls/search.php" method="GET">
+            <input type="text" name="searchresult">
+            <custom-button>Zoeken</custom-button>
+        </form>
         <?php
         include('dbcalls/read.php');
 

@@ -22,4 +22,4 @@ $stmt->bindParam("categorie", $categorie);
 
 $stmt->execute();
 
-// header(header: 'Location: ../admin2.php');
+header(header: 'Location: ../admin2.php');

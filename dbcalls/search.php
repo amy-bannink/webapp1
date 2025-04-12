@@ -1,6 +1,6 @@
 <?php
 include("./conn.php");
-session_start()
+session_start();
 $searchResult = $_GET["searchresult"];
 $test = '%' . $searchResult . '%';
 $stmt = $conn->prepare(query: "SELECT * FROM menuitems WHERE Productnaam LIKE :product;");

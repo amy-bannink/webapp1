@@ -13,10 +13,12 @@ class customButton extends HTMLElement {
         style.textContent = `
                 button {
                     width: 200px;
-                    height: 40px;
+                    height: 36px;
                     background-color: #D9D9D9;
                     color: #212121;
-                    border-radius: 20px;
+                    border-radius: 10px;
+                    margin-top: 50px;
+                    opacity: 0.4;
                 }
             `;
             button.setAttribute("value", "Zoeken");
@@ -24,18 +26,6 @@ class customButton extends HTMLElement {
         shadow.append(style);
 
         shadow.append(button);
-    }
-
-    disconnectedCallback() {
-        console.log("Custom element removed from page.");
-    }
-
-    adoptedCallback() {
-        console.log("Custom element moved to new page.");
-    }
-
-    attributeChangedCallback(name, oldValue, newValue) {
-        console.log(`Attribute ${name} has changed.`);
     }
 
 }

@@ -60,7 +60,8 @@ include('./partials/header.php');
                 ?>
                 <div class="update-form">
                     <form action="./dbcalls/update.php" method="post">
-                        <input type="text" class="update-input font-s" name="Productnaam" id="" value="<?php echo $value['Productnaam']; ?>">
+                    <input type="hidden" name="ID" value="<?php echo ($value['ID']); ?>">
+                    <input type="text" class="update-input font-s" name="Productnaam" id="" value="<?php echo $value['Productnaam']; ?>">
                         <input type="text" class="update-input font-s" name="Prijs" id="" value="<?php echo $value['Prijs']; ?>">
                         <input type="text" class="update-input font-s" name="Omschrijving" id="" value="<?php echo $value['Omschrijving']; ?>">
                         <input type="text" class="update-input font-s" name="Categorie" id="" value="<?php echo $value['Categorie']; ?>">

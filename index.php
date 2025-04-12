@@ -5,18 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css">
 
-    <!-- Importing Google Fonts -->
+
 <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Sawarabi+Mincho&display=swap" rel="stylesheet">
-    <script src="./assets/js/customButton.js"></script>
     <title>Sakura Sushi Website</title>
 </head>
 <body>
 <?php
 include('partials/header.php');
 ?>
-<form action="" method="">
-        <custom-button>Klik hier</custom-button>
-</form>
+
   <section class="flex-r home-section">
         <div class="home-div">
             <img src="./assets/img/logo-soft.png" id="logo-home" alt="Sakura sushi restaurant logo">

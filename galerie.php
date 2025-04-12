@@ -17,6 +17,20 @@ include('partials/header.php');
   <section class="flex-r galerie-title">
             <h1 class="font-m">Galerie</h1>
 </section>
+
+<section>
+    <?php
+        include('dbcalls/read.php');
+        foreach ($cat as $value) {
+                echo '<h1 class="categorie-title">' . $value['Categorie'] . '</h1>';
+                    foreach ($result as $row) {
+                        if ($value['Categorie'] == $row['Categorie']) {
+                            echo $row['Img'];
+                        }
+                    }
+                }
+    ?>
+</section>
 <?php
 include('partials/footer.php');
 ?>

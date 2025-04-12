@@ -7,6 +7,8 @@ $prijs = $_POST['Prijs'];
 $img = $_POST['Img'];
 $omschrijving = $_POST['Omschrijving'];
 $categorie = $_POST['Categorie'];
+$id = $_POST['ID'];
+
 
 var_dump($_POST);
 
@@ -17,6 +19,8 @@ $stmt->bindParam("prijs", $prijs );
 $stmt->bindParam("img", $img );
 $stmt->bindParam("omschrijving", $omschrijving );
 $stmt->bindParam("categorie", $categorie );
+$stmt->bindParam("id", $id);
+
 
 
 $stmt->execute();
