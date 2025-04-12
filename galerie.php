@@ -18,18 +18,20 @@ include('partials/header.php');
             <h1 class="font-m">Galerie</h1>
 </section>
 
-<section>
+<section class="galerie-section">
+    <div class="galerie-container">
     <?php
         include('dbcalls/read.php');
-        foreach ($cat as $value) {
-                echo '<h1 class="categorie-title">' . $value['Categorie'] . '</h1>';
+        foreach ($result as $value) {
+                // echo '<h1 class="categorie-title">' . $value['ID'] . '</h1>';
                     foreach ($result as $row) {
-                        if ($value['Categorie'] == $row['Categorie']) {
-                            echo $row['Img'];
+                        if ($value['ID'] == $row['ID']) {
+                            echo '<img src="' . $row['Img'] . '" class="galerie-img alt="' . $row['Productnaam'] . '">';
                         }
                     }
                 }
     ?>
+    </div>
 </section>
 <?php
 include('partials/footer.php');
