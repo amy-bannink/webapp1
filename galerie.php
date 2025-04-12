@@ -22,14 +22,9 @@ include('partials/header.php');
     <div class="galerie-container">
     <?php
         include('dbcalls/read.php');
-        foreach ($result as $value) {
-                // echo '<h1 class="categorie-title">' . $value['ID'] . '</h1>';
-                    foreach ($result as $row) {
-                        if ($value['ID'] == $row['ID']) {
-                            echo '<img src="' . $row['Img'] . '" class="galerie-img alt="' . $row['Productnaam'] . '">';
-                        }
-                    }
-                }
+            foreach ($result as $row) {
+                echo '<img src="' . $row['Img'] . '" alt="' . $row['Productnaam'] . '" class="galerie-img">';
+            }
     ?>
     </div>
 </section>
