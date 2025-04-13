@@ -47,7 +47,7 @@ include('./partials/header.php');
 <div class="create-form-title">
         <h2 class="font-s bold">UPDATE/DELETE</h2>
 </div>
-<section class="admin">
+<section class="admin flex-c">
 <?php
 
             include("./dbcalls/conn.php");
