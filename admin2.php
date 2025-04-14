@@ -24,7 +24,7 @@ include('./partials/header.php');
 ?>
 <section class="flex-r galerie-title">
     <div class="login-title">
-    <h1 class="font-m">Admin(2)</h1>
+    <h1 class="font-m">Admin</h1>
     </div>
 </section>
 <section class="create-form-area flex-r">
@@ -33,11 +33,11 @@ include('./partials/header.php');
         <h2 class="t-w font-s">CREATE</h2>
         </div>
         <form class="flex-c" action="./dbcalls/create.php" method="post">
-            <input class="font-s create-input" type="text" id="1" name="gerecht" placeholder="Gerechtnaam">
-            <input class="font-s create-input" type="text" id="1" name="prijs" placeholder="Prijs">
-            <input class="font-s create-input" type="text" id="1" name="omschrijving" placeholder="Omschrijving">
-            <input class="font-s create-input" type="text" id="1" name="categorie" placeholder="Categorie">
-            <input class="font-s create-input" type="text" id="1" name="imagelocation" placeholder="Imagelocation">
+            <input class="font-s create-input" type="text" id="1" name="gerecht" placeholder="Gerechtnaam" required>
+            <input class="font-s create-input" type="number" id="prijsje" name="prijs" placeholder="Prijs" required>
+            <input class="font-s create-input" type="text" id="1" name="omschrijving" placeholder="Omschrijving" required>
+            <input class="font-s create-input" type="text" id="1" name="categorie" placeholder="Categorie" required>
+            <input class="font-s create-input" type="text" id="1" name="imagelocation" placeholder="Imagelocation" required>
 
             <button type="submit" value="submit" class="submit-button font-m">Create</button>
         </form>
@@ -62,7 +62,7 @@ include('./partials/header.php');
                     <form action="./dbcalls/update.php" method="post">
                     <input type="hidden" name="ID" value="<?php echo ($value['ID']); ?>">
                     <input type="text" class="update-input font-s" name="Productnaam" id="" value="<?php echo $value['Productnaam']; ?>">
-                        <input type="text" class="update-input font-s" name="Prijs" id="" value="<?php echo $value['Prijs']; ?>">
+                        <input type="number" class="update-input font-s" name="Prijs" id="" value="<?php echo $value['Prijs']; ?>">
                         <input type="text" class="update-input font-s" name="Omschrijving" id="" value="<?php echo $value['Omschrijving']; ?>">
                         <input type="text" class="update-input font-s" name="Categorie" id="" value="<?php echo $value['Categorie']; ?>">
                         <input type="text" class="update-input font-s" name="Img" id="" value="<?php echo $value['Img']; ?>">
@@ -77,7 +77,19 @@ echo '</div>';
 }
 ?>
 </section>
+<script>
+    const prijsInput = document.getElementById("prijsje");
 
+    prijsInput.addEventListener("input", function () {
+        const waarde = prijsInput.value;
+
+        // Check of de waarde géén geldig getal is
+        if (isNaN(waarde) || waarde.trim() === "") {
+            alert("Vul een geldig getal in!");
+            prijsInput.value = ""; // eventueel input wissen
+        }
+    });
+</script>
 
 <?php
 include('./partials/footer.php');

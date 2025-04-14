@@ -1,3 +1,12 @@
+<?php
+
+session_start();
+if(isset($_SESSION['username'])){
+    header('location: ./admin2.php');
+} else{
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,3 +45,4 @@ include('partials/footer.php');
 ?>
 </body>
 </html>
+<?php } ?>

@@ -10,6 +10,7 @@ $categorie = $_POST['Categorie'];
 $id = $_POST['ID'];
 
 
+
 var_dump($_POST);
 
 $sql = 'UPDATE menuitems SET Productnaam = :productnaam, Prijs = :prijs, Img = :img, Omschrijving = :omschrijving, Categorie = :categorie WHERE ID = :id';
