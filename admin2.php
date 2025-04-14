@@ -27,6 +27,57 @@ include('./partials/header.php');
     <h1 class="font-m">Admin</h1>
     </div>
 </section>
+<!-- <section class="contact-form-area flex-r">
+    <div class="contact-form">
+        <div class="contact-form-title">
+        <h2 class="t-w font-s">Ontvangen berichten</h2>
+        </div>
+        <form class="flex-c"action="./dbcalls/sendmessage.php" method="post">
+            <input class="font-s" type="text" id="vnaam" name="voornaam" placeholder="Voornaam" required>
+            <input class="font-s" type="text" id="anaam" name="achternaam" placeholder="Achternaam" required>
+            <input class="font-s" type="email" id="email" name="email" placeholder="E-mailadres" required>
+            <textarea class="font-s" id="bericht" name="bericht" rows="13" cols="50" placeholder="Uw bericht:" required></textarea>
+            <button type="submit" value="Submit" class="submit-button font-m">Verstuur</button>
+
+        </form>
+    </div>
+</section> -->
+
+
+
+<section class="contact-form-area flex-r">
+    <div class="contact-form">
+        <div class="contact-form-title">
+            <h2 class="t-w font-s">Ontvangen berichten</h2>
+        </div>
+        <table class="messages-table">
+            <thead>
+                <tr>
+                    <th>Voornaam</th>
+                    <th>Achternaam</th>
+                    <th>Email</th>
+                    <th>Bericht</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+            include('./dbcalls/readmessage.php');
+
+                // Berichten weergeven in de tabel
+                foreach ($messages as $message) {
+                    echo "<tr>";
+                    echo "<td>" . htmlspecialchars($message['Voornaam']) . "</td>";
+                    echo "<td>" . htmlspecialchars($message['Achternaam']) . "</td>";
+                    echo "<td>" . htmlspecialchars($message['Emailadres']) . "</td>";
+                    echo "<td>" . htmlspecialchars($message['Bericht']) . "</td>";
+                    echo "</tr>";
+                }
+                ?>
+            </tbody>
+        </table>
+    </div>
+</section>
+
 <section class="create-form-area flex-r">
     <div class="create-form">
         <div class="create-form-title">
@@ -47,6 +98,7 @@ include('./partials/header.php');
 <div class="create-form-title">
         <h2 class="font-s bold">UPDATE/DELETE</h2>
 </div>
+
 <section class="admin flex-c">
 <?php
 

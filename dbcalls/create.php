@@ -14,8 +14,6 @@ $categorie = $_POST['categorie'];
 //     echo "Prijs is verplicht.";
 // }
 include("./conn.php");
-
-
 if ($prijs === false) {
     echo "Ongeldige prijs.";
 } else {
